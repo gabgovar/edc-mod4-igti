@@ -233,9 +233,9 @@ env:
   - name: AIRFLOW__CORE__REMOTE_LOGGING
     value: 'True'
   - name: AIRFLOW__LOGGING__REMOTE_BASE_LOG_FOLDER
-    value: "https://console.cloud.google.com/storage/browser/gabriel-dz/airflow-logs"
+    value: "s3://igti-mod4-126905271498/airflow-logs/"
   - name: AIRFLOW__LOGGING__REMOTE_LOG_CONN_ID
-    value: "my_gcp"
+    value: "my_aws"
 # - name: ""
 #   value: ""
 
@@ -345,7 +345,7 @@ data:
 
 # Fernet key settings
 # Note: fernetKey can only be set during install, not upgrade
-fernetKey: iMtjXYxLZ2vn9Dr92jW5shk5SVmOKgxBx71lWTAQqVM=
+fernetKey: "3Wqc_Qq-IbMBuGx-zrGdpwKnTCk5HSA1UOTPsGai-Dg="
 fernetKeySecretName: ~
 
 # Flask secret key for Airflow Webserver: `[webserver] secret_key` in airflow.cfg
